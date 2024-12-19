@@ -1,0 +1,189 @@
+
+/* -- CSS STYLE RESET -- */
+/* 1. Use a more-intuitive box-sizing model */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+
+
+}
+
+span{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--clr-grey-900-hsl);
+  height: 100vh;
+ /* display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*----- CSS STYLE RESET END-----*/
+
+
+/*--- Variable setup ---*/
+:root {
+
+  /*---- Colors ----*/
+  --clr-Green: #c5f82a;
+  --clr-White: #ffffff;
+  --clr-Grey-700: #333333;
+  --clr-Grey-900: #141414;
+  --clr-Grey-800: #1f1f1f;
+
+
+  /*---- Font ----*/
+  --ff-main: "Inter";
+  --fs-body: 0.875rem;
+  --fs-heading: 1.5rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* Spacing */
+  --sp-500-40px: 40px;
+  --sp-300-24px: 24px;
+  --sp-200-16px: 16px;
+  --sp-150-12px: 12px;
+  --sp-100-8px: 8px;
+  --sp-50-4px: 4px;
+
+}
+/*--- Variable setup End ---*/
+
+body {
+  background-color: var(--clr-Grey-900);
+  font-family: var(--ff-main);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-400);
+  color: var(--clr-White);
+}
+
+/*--- Desktop Styling Start ---*/
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 384px;
+  height: 611px;
+  background-color: var(--clr-Grey-800);
+  padding: var(--sp-500-40px);
+  border-radius: 12px;
+  line-height: 150%;
+  letter-spacing: 0px;
+
+}
+
+.profile-pic {
+  border-radius: 200px;
+  height: 88px;
+  width: 88px;
+  margin-bottom: var(--sp-300-24px);
+}
+
+.name-location{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: var(--sp-300-24px);
+  height: 61px;
+  width: 304px;
+}
+
+.name{
+  margin-bottom: var(--sp-50-4px);
+  line-height: 150%;
+}
+
+.location{
+  font-weight: var(--fw-600);
+  color: var(--clr-Green);
+}
+
+.bio{
+  font-weight: 200;
+  font-size: var(--ff-main);
+  margin-bottom: var(--sp-300-24px);
+  line-height: 150%;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  line-height: 150%;
+  height: 307px;
+  width: 289px;
+}
+
+/*--- Mobile Styling Start ---*/
+@media (max-width: 460px){
+
+
+  .card{
+    width: 327px;
+    height: 579px;
+    padding: var(--sp-300-24px);
+  }
+
+  .links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 279pz;
+  }
+
+}

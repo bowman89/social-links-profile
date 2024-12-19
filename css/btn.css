@@ -1,0 +1,84 @@
+:root {
+    /*---- Colors ----*/
+    --green: 75 94% 57%;
+    --white: 0 0 100%;
+    --grey-700: 0 0% 20%;
+    --grey-800: 0 0% 12%;
+    --grey-900: 0 0% 8%;
+  
+  
+    --clr-green-hsl: hsl(var(--green));
+    --clr-white-hsl: hsl(var(--white));
+    --clr-grey-700-hsl: hsl(var(--grey-700));
+    --clr-grey-800-hsl: hsl(var(--grey-800));
+    --clr-grey-900-hsl: hsl(var(--grey-900));
+    
+  
+    /*---- Font ----*/
+    
+    /* Preset 1 - Bold */
+    --p1-text-font-size: 24px;
+    --p1-text-font-bold: 700;
+    --p1-text-line-height: 150%;
+    --p1-text-letter-spacing: 0px;
+  
+    /* Preset 2 - Regular */
+    --p2-text-font-size: 14px;
+    --p2-text-font-regular: 400;
+    --p2-text-line-height: 150%;
+    --p2-text-letter-spacing: 0px;
+  
+    /* Preset 3 - Bold */
+    --p3-text-font-size: 14px;
+    --p3-text-font-bold: 700;
+    --p3-text-line-height: 150%;
+    --p3-text-letter-spacing: 0px;
+  
+  
+    /*---- Spacings ----*/
+    --spacing-500-24: 40px;
+    --spacing-300-24: 24px;
+    --spacing-200-16: 16px;
+    --spacing-150-12: 12px;
+    --spacing-100-8: 8px;
+    --spacing-50-5: 4px;
+  }
+
+
+.btn{
+    background-color: var(--clr-grey-700-hsl);
+    color: white;
+    border: none;
+    padding: 12px 12px;
+    font-size: var(--p3-text-font-size);
+    font-weight: var(--p3-text-font-bold);
+    line-height: 150%;
+    letter-spacing: 0px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 304px;
+    height: 45px;
+}
+
+.btn:hover{
+    background-color: var(--clr-green-hsl);
+    color: var(--clr-grey-700-hsl);
+    transition: all 0.3s ease;
+}
+
+.btn:not(:hover){
+    background-color: var(--clr-grey-700-hsl);
+    
+    transition: background-color 0.9s ease;
+}
+
+
+@media (max-width: 460px){
+
+.btn{
+    width: 279px;
+    height: 45px;
+}
+
+}
